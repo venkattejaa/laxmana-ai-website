@@ -60,7 +60,7 @@ export const Navbar: React.FC = () => {
                         <div className="flex items-center gap-4 border-l border-white/10 pl-6">
                             <Button
                                 variant="secondary"
-                                href="https://github.com/venkatateja/laxmana-ai"
+                                href="https://github.com/venkattejaa/laxmana-ai"
                                 external
                                 icon={Github}
                             >
@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
                     <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
                         <Button
                             variant="secondary"
-                            href="https://github.com/venkatateja/laxmana-ai"
+                            href="https://github.com/venkattejaa/laxmana-ai"
                             external
                             icon={Github}
                             className="justify-center"

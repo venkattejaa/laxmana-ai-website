@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
                             Open Source AI Development Agent. Build complete applications with voice or text using multi-provider AI.
                         </p>
                         <div className="flex items-center gap-4">
-                            <a href="https://github.com/venkatateja/laxmana-ai" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors" aria-label="GitHub">
+                            <a href="https://github.com/venkattejaa/laxmana-ai" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors" aria-label="GitHub">
                                 <Github className="w-5 h-5" />
                             </a>
                             <a href="https://twitter.com/laxmana_ai" className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white transition-colors" aria-label="Twitter">
@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
                             Student Developer • Open Source Enthusiast
                         </p>
                         <div className="flex items-center gap-4">
-                            <a href="https://github.com/venkatateja" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
+                            <a href="https://github.com/venkattejaa" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
                                 <Github className="w-4 h-4" /> GitHub
                             </a>
                             <span className="text-white/20">•</span>

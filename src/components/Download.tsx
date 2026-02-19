@@ -66,8 +66,8 @@ export const Download: React.FC = () => {
                                 key={platform.id}
                                 onClick={() => setActivePlatform(platform)}
                                 className={`flex-1 flex items-center justify-center gap-2 py-6 px-4 transition-all duration-300 border-b-2 ${activePlatform.id === platform.id
-                                        ? 'bg-white/[0.04] border-clawbud-cyan text-clawbud-cyan'
-                                        : 'border-transparent text-white/40 hover:text-white/60 hover:bg-white/[0.02]'
+                                    ? 'bg-white/[0.04] border-clawbud-cyan text-clawbud-cyan'
+                                    : 'border-transparent text-white/40 hover:text-white/60 hover:bg-white/[0.02]'
                                     }`}
                             >
                                 <platform.icon size={20} />
@@ -105,7 +105,7 @@ export const Download: React.FC = () => {
                                     Download for {activePlatform.name}
                                     <span className="text-[10px] opacity-60 ml-1">({activePlatform.size})</span>
                                 </a>
-                                <a href="https://github.com" className="btn-secondary flex items-center justify-center gap-2">
+                                <a href="https://github.com/venkattejaa/laxmana-ai/releases/latest" className="btn-secondary flex items-center justify-center gap-2">
                                     <Github size={20} />
                                     View Source
                                 </a>

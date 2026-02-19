@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
 
                     <div ref={headerRef} className={`transition-all duration-1000 transform ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                        <a href="https://github.com/venkatateja/laxmana-ai" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6 hover:bg-cyan-400/20 transition-colors">
+                        <a href="https://github.com/venkattejaa/laxmana-ai" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6 hover:bg-cyan-400/20 transition-colors">
                             <Star className="w-4 h-4 fill-cyan-400" />
                             {stats?.stars ? `${stats.stars.toLocaleString()}+ Stars on GitHub` : 'Star on GitHub'}
                         </a>
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
                             <Button href="#download" icon={Download} className="w-full sm:w-auto justify-center">
                                 Download Now
                             </Button>
-                            <Button variant="secondary" href="https://github.com/venkatateja/laxmana-ai" external icon={Github} className="w-full sm:w-auto justify-center">
+                            <Button variant="secondary" href="https://github.com/venkattejaa/laxmana-ai" external icon={Github} className="w-full sm:w-auto justify-center">
                                 View Source
                             </Button>
                         </div>

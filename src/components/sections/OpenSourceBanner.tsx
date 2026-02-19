@@ -30,21 +30,21 @@ export const OpenSourceBanner: React.FC = () => {
 
                     <div className="flex flex-wrap items-center gap-4 w-full md:w-auto">
                         <a
-                            href="https://github.com/venkatateja/laxmana-ai/blob/main/LICENSE"
+                            href="https://github.com/venkattejaa/laxmana-ai/blob/main/LICENSE"
                             className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium flex items-center gap-2 flex-1 md:flex-none justify-center"
                             target="_blank" rel="noopener noreferrer"
                         >
                             View License <ExternalLink className="w-4 h-4" />
                         </a>
                         <a
-                            href="https://github.com/venkatateja/laxmana-ai/blob/main/CONTRIBUTING.md"
+                            href="https://github.com/venkattejaa/laxmana-ai/blob/main/CONTRIBUTING.md"
                             className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-sm font-medium flex items-center gap-2 flex-1 md:flex-none justify-center"
                             target="_blank" rel="noopener noreferrer"
                         >
                             Contribute <Github className="w-4 h-4" />
                         </a>
                         <a
-                            href="https://github.com/sponsors/venkatateja"
+                            href="https://github.com/sponsors/venkattejaa"
                             className="px-4 py-2 rounded-lg bg-oss-green/20 border border-oss-green/30 hover:bg-oss-green/30 text-oss-green transition-colors text-sm font-medium flex items-center gap-2 flex-1 md:flex-none justify-center"
                             target="_blank" rel="noopener noreferrer"
                         >
