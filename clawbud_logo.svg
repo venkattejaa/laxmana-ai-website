@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0e17"/>
+      <stop offset="100%" style="stop-color:#151a2e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="60%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outerGlow">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="16" y="16" width="480" height="480" rx="80" ry="80" fill="url(#bg)" stroke="rgba(56, 189, 248, 0.15)" stroke-width="2"/>
+  <!-- Glass reflection -->
+  <rect x="16" y="16" width="480" height="240" rx="80" ry="80" fill="rgba(255,255,255,0.03)"/>
+  
+  <!-- Innovated Claw Design for "Clawbud" -->
+  <g filter="url(#outerGlow)">
+    <!-- Base Branch/Bud shape -->
+    <path d="M 256 420 L 256 360 Q 256 320 220 300 L 140 240 Q 120 220 140 180 L 180 140" fill="none" stroke="url(#glow)" stroke-width="24" stroke-linecap="round"/>
+    <!-- Top Claw Finger -->
+    <path d="M 256 360 Q 256 280 320 240 Q 380 200 360 140" fill="none" stroke="url(#glow)" stroke-width="24" stroke-linecap="round"/>
+    <!-- Middle Claw Finger / Bud Stem -->
+    <path d="M 256 360 Q 300 340 340 300 Q 380 260 400 180" fill="none" stroke="url(#glow)" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Bright Center Node (The "Bud") -->
+  <circle cx="256" cy="340" r="12" fill="#38bdf8" filter="url(#neon)"/>
+  
+  <!-- Inner Detail Lines -->
+  <path d="M 256 420 L 256 360" fill="none" stroke="#f0f4f8" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 256 360 Q 256 280 320 240" fill="none" stroke="#f0f4f8" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Circuit nodes -->
+  <circle cx="180" cy="140" r="10" fill="#38bdf8" filter="url(#neon)"/>
+  <circle cx="360" cy="140" r="10" fill="#3b82f6" filter="url(#neon)"/>
+  <circle cx="400" cy="180" r="8" fill="#0ea5e9" filter="url(#neon)"/>
+  
+  <!-- Small circuit connector -->
+  <line x1="180" y1="140" x2="210" y2="120" stroke="#38bdf8" stroke-width="3" filter="url(#neon)"/>
+  <circle cx="210" cy="120" r="4" fill="#38bdf8" filter="url(#neon)"/>
+</svg>
