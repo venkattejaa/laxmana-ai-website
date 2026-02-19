@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clawbud — Build Apps at Lightning Speed</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Clawbud is a blazing-fast AI app generator powered by Cerebras (2000 tok/sec). Generate, preview, and deploy full-stack apps in seconds." />
+    <meta name="keywords" content="AI app generator, Clawbud, Cerebras, Groq, code generator, bolt.new alternative" />
+    <meta name="author" content="S Venkata Teja Naik" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clawbud — Build Apps at Lightning Speed" />
+    <meta property="og:description"
+        content="AI-powered app generator. 2000 tokens/sec. From prompt to production in seconds." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <img src="assets/clawbud_logo.svg" alt="Clawbud Logo" />
+                <span class="logo-text">Clawbud</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#speed">Speed</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="https://openclaw.ai/" class="btn btn-primary nav-cta">Try OpenClaw</a></li>
+            </ul>
+
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Inspired by OpenClaw & Bolt.new — Open Source & Free
+                    </div>
+
+                    <h1 class="hero-title">
+                        Build Apps with the<br />
+                        <span class="gradient-text highlight">Autonomous Agent</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Clawbud is the next-gen autonomous agent that turns your prompts into production-ready apps.
+                        Inspired by <strong>Moltbot</strong> and <strong>OpenClaw</strong>, the tool is now faster,
+                        smarter, and fully open-source.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="https://openclaw.ai/" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Launch App
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            View Docs
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-number" data-counter="2000" data-suffix="+">0</div>
+                            <div class="stat-label">Tokens / Sec</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number" data-counter="10000" data-suffix="+">0</div>
+                            <div class="stat-label">Developers</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number" data-counter="50" data-suffix="k+">0</div>
+                            <div class="stat-label">Apps Built</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-glow"></div>
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-window-title">laxmana-ai — generate.js</span>
+                        </div>
+                        <div class="code-body">
+                            <!-- Typing animation fills this -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ DOWNLOAD HUB ============ -->
+        <section class="download-hub" id="download">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> Download</span>
+                    <h2 class="section-title">Get <span class="gradient-text">Clawbud</span></h2>
+                    <p class="section-subtitle mx-auto">Available on all major platforms. Free forever for individual
+                        developers.</p>
+                    <div class="version-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        v2.0.0 Beta • Free Forever
+                    </div>
+                </div>
+
+                <!-- Platform Tabs -->
+                <div class="platform-tabs reveal">
+                    <button class="platform-tab active" data-platform="windows">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                        </svg>
+                        Windows
+                    </button>
+                    <button class="platform-tab" data-platform="macos">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        macOS
+                    </button>
+                    <button class="platform-tab" data-platform="linux">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.368 1.884 1.455.788.084 1.635-.334 2.202-.996a44.802 44.802 0 0 0 .42-.56c.2-.27.1-.656.181-.917.017-.052.033-.085.051-.133.051-.133.198-.198.33-.265a.56.56 0 0 0 .05-.034c.286-.2.587-.4.726-.866.073-.235.057-.5-.023-.765-.373-.12.075-.28.132-.404.343-.694.276-1.463-.054-2.165-.189-.394-.462-.764-.73-1.165-.191-.3-.34-.665-.456-.97-.067-.182-.13-.333-.192-.465a1.126 1.126 0 0 0-.046-.112c-.086-.2-.204-.4-.34-.598a10.833 10.833 0 0 0-.327-.445 13.55 13.55 0 0 1-.406-.54c-.266-.374-.404-.692-.455-.963-.025-.136-.022-.265 0-.39.017-.073.05-.154.091-.2.06-.06.108-.1.162-.134 0-.012 0-.025-.007-.04-.086-.33-.175-.455-.296-.592l-.017-.02a3.005 3.005 0 0 0-.066-.06c-.164-.163-.369-.3-.6-.353-.084-.02-.168-.028-.26-.032-.083-.003-.12-.023-.166.018-.282.27-.425.668-.463 1.08a3.15 3.15 0 0 0 .042.748l.006.033c.022.1.028.15.09.25.086.116.18.2.302.35.04.05.137.125.175.192.096.16.104.332.087.503-.019.14-.08.296-.162.4-.105.146-.198.186-.343.2-.14.013-.309-.063-.479-.217-.338-.31-.608-.78-.756-1.318a5.51 5.51 0 0 1-.143-.714c-.048-.33-.083-.689-.132-1.01-.026-.16-.058-.313-.076-.459-.018-.146-.028-.266-.02-.435.01-.199.005-.384.01-.524l.009-.002c.003-.09 0-.198-.01-.3a5.064 5.064 0 0 0-.18-1.06c-.12-.395-.328-.708-.58-.887-.082-.058-.163-.1-.255-.13a1.012 1.012 0 0 0-.292-.052c-.1.002-.2.016-.292.043-.136.04-.256.1-.37.18zM8.11 15.7c.1.3.1.6 0 .79-.14.2-.24.3-.38.35l-.28-.26c.05-.1.08-.24.1-.4 0-.2 0-.32-.04-.47l.6.01zm6.87-.16c-.05.15-.05.3-.04.47.02.16.05.3.1.4l-.28.26c-.14-.05-.24-.15-.38-.35-.1-.19-.1-.49 0-.79l.6-.01z" />
+                        </svg>
+                        Linux
+                    </button>
+                    <button class="platform-tab" data-platform="android">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.523 15.341a.996.996 0 0 0 0-1.993.996.996 0 0 0 0 1.993m-11.046 0a.996.996 0 0 0 0-1.993.996.996 0 0 0 0 1.993m11.405-6.02 1.997-3.46a.416.416 0 0 0-.152-.566.416.416 0 0 0-.566.152l-2.024 3.504A12.22 12.22 0 0 0 12 7.814a12.22 12.22 0 0 0-5.137 1.137L4.839 5.447a.416.416 0 0 0-.566-.152.416.416 0 0 0-.152.566l1.997 3.46C2.688 11.186.343 14.627 0 18.696h24c-.344-4.07-2.688-7.51-6.118-9.375" />
+                        </svg>
+                        Android
+                    </button>
+                </div>
+
+                <!-- Platform Download Content -->
+                <div class="download-content reveal">
+                    <!-- Windows -->
+                    <div class="platform-info active" id="windows-info">
+                        <button class="btn-download" onclick="alert('Download starting...')">
+                            Download for Windows
+                            <span class="file-size">64-bit • 85 MB • .exe</span>
+                        </button>
+                        <div class="download-meta">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                SHA256 verified
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>
+                                Signed binary
+                            </span>
+                            <span>v2.0.0</span>
+                        </div>
+                        <div class="requirements-box">
+                            <strong>Requirements:</strong> Windows 10/11 • 4 GB RAM • 500 MB storage • Internet
+                            connection
+                        </div>
+                    </div>
+
+                    <!-- macOS -->
+                    <div class="platform-info" id="macos-info">
+                        <button class="btn-download" onclick="alert('Download starting...')">
+                            Download for macOS
+                            <span class="file-size">Universal (Intel + Apple Silicon) • 92 MB • .dmg</span>
+                        </button>
+                        <div class="download-meta">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                SHA256 verified
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>
+                                Notarized
+                            </span>
+                            <span>v2.0.0</span>
+                        </div>
+                        <div class="requirements-box">
+                            <strong>Requirements:</strong> macOS 12+ • 4 GB RAM • 500 MB storage
+                        </div>
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="platform-info" id="linux-info">
+                        <button class="btn-download" onclick="alert('Download starting...')">
+                            Download for Linux
+                            <span class="file-size">x86_64 • 78 MB • .AppImage</span>
+                        </button>
+                        <div class="download-meta">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                SHA256 verified
+                            </span>
+                            <span>Also: .deb, .rpm</span>
+                            <span>v2.0.0</span>
+                        </div>
+                        <div class="requirements-box">
+                            <strong>Requirements:</strong> Ubuntu 20.04+ / Fedora 36+ • 4 GB RAM • 500 MB storage
+                        </div>
+                    </div>
+
+                    <!-- Android -->
+                    <div class="platform-info" id="android-info">
+                        <button class="btn-download" onclick="alert('Download starting...')">
+                            Download for Android
+                            <span class="file-size">ARM64 • 45 MB • .apk</span>
+                        </button>
+                        <div class="download-meta">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                SHA256 verified
+                            </span>
+                            <span>Google Play coming soon</span>
+                            <span>v2.0.0</span>
+                        </div>
+                        <div class="requirements-box">
+                            <strong>Requirements:</strong> Android 10+ • 3 GB RAM • 200 MB storage
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="social-proof reveal">
+                    <div class="avatar-stack">
+                        <span class="avatar">VT</span>
+                        <span class="avatar">AK</span>
+                        <span class="avatar">RS</span>
+                        <span class="avatar">PJ</span>
+                        <span class="avatar">+</span>
+                    </div>
+                    <span>Join <strong>10,000+</strong> developers building with Clawbud</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============ FEATURES ============ -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> Features</span>
+                    <h2 class="section-title">Everything You Need to<br /><span class="gradient-text">Ship Faster</span>
+                    </h2>
+                    <p class="section-subtitle mx-auto">From idea to deployed app in seconds — not hours. Clawbud
+                        handles the heavy lifting.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Powered by Cerebras at 2,000 tokens/sec — the fastest inference engine on the planet. Your
+                            apps generate instantly.</p>
+                    </div>
+
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Dual AI Engine</h3>
+                        <p>Cerebras as primary with Groq fallback ensures 99.9% uptime. If one engine is busy, the other
+                            takes over seamlessly.</p>
+                    </div>
+
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">📱</div>
+                        <h3>Multi-Platform</h3>
+                        <p>Available on Windows, macOS, Linux, and Android. Build from anywhere, on any device you love.
+                        </p>
+                    </div>
+
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">🚀</div>
+                        <h3>One-Click Deploy</h3>
+                        <p>Deploy to Vercel, Netlify, or your own server with a single click. From code to production in
+                            seconds.</p>
+                    </div>
+
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>Your code stays on your machine. We never store or train on your data. Full privacy, zero
+                            compromises.</p>
+                    </div>
+
+                    <div class="feature-card glass-card reveal">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Beautiful Output</h3>
+                        <p>Every generated app comes with modern UI, responsive design, and production-ready code you'll
+                            be proud of.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============ HOW IT WORKS ============ -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> How It Works</span>
+                    <h2 class="section-title">Three Steps to<br /><span class="gradient-text">Your Next App</span></h2>
+                    <p class="section-subtitle mx-auto">No boilerplate. No setup. Just describe what you want and let
+                        Laxmana handle the rest.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-card reveal">
+                        <div class="step-number">01</div>
+                        <h3>Describe Your App</h3>
+                        <p>Tell Laxmana what you want to build. Use natural language — "Build me a task manager with
+                            dark mode and drag-and-drop."</p>
+                    </div>
+
+                    <div class="step-card reveal">
+                        <div class="step-number">02</div>
+                        <h3>AI Generates Code</h3>
+                        <p>Laxmana's dual AI engine writes clean, production-ready code at 2,000 tokens/sec. Watch your
+                            app come to life in real-time.</p>
+                    </div>
+
+                    <div class="step-card reveal">
+                        <div class="step-number">03</div>
+                        <h3>Deploy &amp; Share</h3>
+                        <p>Preview your app live, make refinements with follow-up prompts, then deploy with one click.
+                            Share it with the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SPEED BENCHMARK ============ -->
+        <section class="speed-section" id="speed">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> Speed</span>
+                    <h2 class="section-title">The Fastest<br /><span class="gradient-text">AI Code Generator</span></h2>
+                    <p class="section-subtitle mx-auto">We didn't just optimize for speed — we built on the fastest
+                        inference hardware in existence.</p>
+                </div>
+
+                <div class="benchmark-grid">
+                    <div class="speed-counter-box glass-card reveal">
+                        <div class="speed-number" data-counter="2000" data-suffix="">0</div>
+                        <div class="speed-unit">tokens / second</div>
+                        <div class="speed-label">Powered by Cerebras Wafer-Scale Engine</div>
+                    </div>
+
+                    <div class="comparison-bars reveal">
+                        <div class="bar-item">
+                            <div class="bar-label">
+                                <span class="bar-name">🏆 Clawbud (Cerebras)</span>
+                                <span class="bar-value">2,000 tok/s</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill laxmana" data-bar-width="100%" data-delay="200"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">
+                                <span class="bar-name">Clawbud (Groq Fallback)</span>
+                                <span class="bar-value">800 tok/s</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill competitor" data-bar-width="40%" data-delay="400"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">
+                                <span class="bar-name">Competitor A</span>
+                                <span class="bar-value">350 tok/s</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill competitor" data-bar-width="17.5%" data-delay="600"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">
+                                <span class="bar-name">Competitor B</span>
+                                <span class="bar-value">150 tok/s</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill competitor" data-bar-width="7.5%" data-delay="800"></div>
+                            </div>
+                        </div>
+
+                        <div class="bar-item">
+                            <div class="bar-label">
+                                <span class="bar-name">Traditional IDE + Copilot</span>
+                                <span class="bar-value">60 tok/s</span>
+                            </div>
+                            <div class="bar-track">
+                                <div class="bar-fill competitor" data-bar-width="3%" data-delay="1000"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> Testimonials</span>
+                    <h2 class="section-title">Loved by<br /><span class="gradient-text">Developers</span></h2>
+                    <p class="section-subtitle mx-auto">Hear from the developers, students, and builders who ship faster
+                        with Clawbud.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card glass-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"I built my entire hackathon project in under 10 minutes. The speed is unreal —
+                            it's like having a senior developer pair-programming with you at 100x speed."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4>Arun K.</h4>
+                                <span>CS Student, IIT Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"The Cerebras + Groq combo is genius. I've never experienced downtime, and the
+                            code quality rivals what I'd write myself. This is the future of development."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4>Sneha M.</h4>
+                                <span>Full-Stack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glass-card reveal">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"We replaced our entire prototyping workflow with Clawbud. What used to take
+                            our team a week now takes an afternoon. Absolutely game-changing."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RJ</div>
+                            <div class="author-info">
+                                <h4>Rajesh J.</h4>
+                                <span>Tech Lead, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PRICING ============ -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label"><span class="dot"></span> Pricing</span>
+                    <h2 class="section-title">Simple, Transparent<br /><span class="gradient-text">Pricing</span></h2>
+                    <p class="section-subtitle mx-auto">Start free. Scale when you're ready. No hidden fees, no
+                        surprises.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Free -->
+                    <div class="pricing-card glass-card reveal">
+                        <div class="plan-name">Free</div>
+                        <div class="plan-price">
+                            <span class="currency">$</span>0
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-desc">Perfect for students &amp; personal projects</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> 50 generations / day</li>
+                            <li><span class="check">✓</span> Cerebras engine</li>
+                            <li><span class="check">✓</span> All platforms</li>
+                            <li><span class="check">✓</span> Community support</li>
+                            <li><span class="check">✓</span> Basic templates</li>
+                        </ul>
+                        <a href="#download" class="btn btn-secondary">Get Started Free</a>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="pricing-card glass-card featured reveal">
+                        <div class="plan-name">Pro</div>
+                        <div class="plan-price">
+                            <span class="currency">$</span>9
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-desc">For serious developers &amp; freelancers</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> Unlimited generations</li>
+                            <li><span class="check">✓</span> Cerebras + Groq engines</li>
+                            <li><span class="check">✓</span> Priority queue</li>
+                            <li><span class="check">✓</span> One-click deploy</li>
+                            <li><span class="check">✓</span> Premium templates</li>
+                            <li><span class="check">✓</span> Email support</li>
+                        </ul>
+                        <a href="#download" class="btn btn-primary">Upgrade to Pro</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pricing-card glass-card reveal">
+                        <div class="plan-name">Enterprise</div>
+                        <div class="plan-price">
+                            <span class="currency">$</span>29
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-desc">For teams &amp; organizations</p>
+                        <ul class="pricing-features">
+                            <li><span class="check">✓</span> Everything in Pro</li>
+                            <li><span class="check">✓</span> Team collaboration</li>
+                            <li><span class="check">✓</span> Custom AI models</li>
+                            <li><span class="check">✓</span> SSO &amp; admin dashboard</li>
+                            <li><span class="check">✓</span> Dedicated support</li>
+                            <li><span class="check">✓</span> SLA guarantee</li>
+                        </ul>
+                        <a href="#download" class="btn btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ============ GITHUB SECTION ============ -->
+        <section class="github-section" id="github">
+            <div class="container">
+                <div class="github-content reveal">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+
+                    <h2 class="section-title"><span class="gradient-text">Open Source</span></h2>
+                    <p class="section-subtitle">Laxmana AI is open source and community-driven. Star us, fork us,
+                        contribute!</p>
+
+                    <div class="github-stats">
+                        <div class="gh-stat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <span class="gh-count" data-counter="2500" data-suffix="+">0</span> Stars
+                        </div>
+                        <div class="gh-stat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="18" r="3" />
+                                <circle cx="6" cy="6" r="3" />
+                                <circle cx="18" cy="6" r="3" />
+                                <path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9" />
+                                <path d="M12 12v3" />
+                            </svg>
+                            <span class="gh-count" data-counter="480" data-suffix="+">0</span> Forks
+                        </div>
+                        <div class="gh-stat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                            <span class="gh-count" data-counter="120" data-suffix="+">0</span> Contributors
+                        </div>
+                    </div>
+
+                    <div class="github-badges">
+                        <span class="gh-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            MIT License
+                        </span>
+                        <span class="gh-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+                            CI Passing
+                        </span>
+                        <span class="gh-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            </svg>
+                            Docs Available
+                        </span>
+                    </div>
+
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
+                        style="margin-top: 24px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="Laxmana AI" />
+                        <span class="gradient-text">Laxmana AI</span>
+                    </div>
+                    <p>The blazing-fast AI app generator powered by Cerebras &amp; Groq. From idea to production in
+                        seconds.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">Changelog</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#github">Open Source</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Laxmana AI. Made with ❤️ by <strong>S Venkata Teja Naik</strong></span>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter / X">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Discord">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
