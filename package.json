@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://venkattejaa.github.io/laxmana-ai-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
