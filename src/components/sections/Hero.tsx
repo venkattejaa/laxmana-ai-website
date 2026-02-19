@@ -16,7 +16,7 @@ Writing code at 2140 tokens/sec
 Starting local development server...`;
 
 export const Hero: React.FC = () => {
-    const stats = useGitHubStats('venkatateja/laxmana-ai');
+    const stats = useGitHubStats('venkattejaa/laxmana-ai');
     const { ref: headerRef, inView: headerInView } = useScrollAnimation(0.1);
     const [typedText, setTypedText] = useState('');
 

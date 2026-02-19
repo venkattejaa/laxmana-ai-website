@@ -8,7 +8,7 @@ const footerSections = {
         links: [
             { label: "Features", href: "#features" },
             { label: "Download", href: "#download" },
-            { label: "Changelog", href: "https://github.com/venkatateja/laxmana-ai/releases" },
+            { label: "Changelog", href: "https://github.com/venkattejaa/laxmana-ai/releases" },
             { label: "Roadmap", href: "#roadmap" }
         ]
     },
@@ -24,16 +24,16 @@ const footerSections = {
     community: {
         title: "Community",
         links: [
-            { label: "GitHub", href: "https://github.com/venkatateja/laxmana-ai" },
+            { label: "GitHub", href: "https://github.com/venkattejaa/laxmana-ai" },
             { label: "Discord", href: "https://discord.gg/laxmana-ai" },
             { label: "Twitter", href: "https://twitter.com/laxmana_ai" },
-            { label: "Contribute", href: "https://github.com/venkatateja/laxmana-ai/blob/main/CONTRIBUTING.md" }
+            { label: "Contribute", href: "https://github.com/venkattejaa/laxmana-ai/blob/main/CONTRIBUTING.md" }
         ]
     },
     legal: {
         title: "Legal",
         links: [
-            { label: "License (MIT)", href: "https://github.com/venkatateja/laxmana-ai/blob/main/LICENSE" },
+            { label: "License (MIT)", href: "https://github.com/venkattejaa/laxmana-ai/blob/main/LICENSE" },
             { label: "Privacy", href: "/privacy" },
             { label: "Terms", href: "/terms" }
         ]
@@ -103,11 +103,11 @@ export const Footer: React.FC = () => {
                                 <Github className="w-4 h-4" /> GitHub
                             </a>
                             <span className="text-white/20">•</span>
-                            <a href="https://twitter.com/venkatateja" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
+                            <a href="https://twitter.com/venkattejaa" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
                                 <Twitter className="w-4 h-4" /> Twitter
                             </a>
                             <span className="text-white/20">•</span>
-                            <a href="https://linkedin.com/in/venkatateja" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
+                            <a href="https://linkedin.com/in/venkattejaa" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-cyan-400 flex items-center gap-1 text-sm font-medium transition-colors">
                                 <Linkedin className="w-4 h-4" /> LinkedIn
                             </a>
                         </div>
