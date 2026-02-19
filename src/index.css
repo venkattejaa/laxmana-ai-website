@@ -88,15 +88,40 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(34, 211, 238, 0.4)] hover:scale-105 active:scale-95 flex items-center gap-2;
+    @apply bg-gradient-to-r from-cyan-400 to-cyan-500 text-black font-semibold px-6 py-3 rounded-lg flex items-center gap-2;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+    transform: scale(1.05);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
   }
 
   .btn-secondary {
-    @apply border border-white/10 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:bg-white/5 hover:border-white/20 flex items-center gap-2 bg-white/5;
+    @apply border border-white/10 text-white font-medium px-6 py-3 rounded-lg flex items-center gap-2 bg-white/5;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-white/5 border-white/20;
   }
 
   .btn-oss {
-    @apply bg-gradient-to-r from-oss-green to-green-500 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(63, 185, 80, 0.4)] hover:scale-105 active:scale-95 flex items-center gap-2;
+    @apply bg-gradient-to-r from-oss-green to-green-500 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2;
+    transition: all 0.3s ease;
+  }
+
+  .btn-oss:hover {
+    box-shadow: 0 0 20px rgba(63, 185, 80, 0.4);
+    transform: scale(1.05);
+  }
+
+  .btn-oss:active {
+    transform: scale(0.95);
   }
 
   .section-padding {
