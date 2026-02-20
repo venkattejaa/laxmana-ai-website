@@ -1,73 +1,41 @@
 import React from 'react';
 import { Container } from '../layout/Container';
 import { Card } from '../ui/Card';
-import { Zap, Cpu, Mic, Shield, Bot, GitBranch, Cloud, Puzzle } from 'lucide-react';
+import { Activity, Brain, Shield, Wrench } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const features = [
     {
-        icon: Zap,
-        title: 'Lightning Fast',
-        description: '2000+ tokens/sec with Cerebras inference',
+        icon: Wrench,
+        title: 'Tool Registry',
+        description: '20+ integrated tools including code genesis, web scraping, data parsing, and deployment.',
         badge: 'Core',
         color: 'text-cyan-400',
         bg: 'bg-cyan-400/10'
     },
     {
-        icon: Cpu,
-        title: 'Multi-Provider AI',
-        description: 'Use Cerebras, Groq, OpenAI, or local Ollama',
+        icon: Brain,
+        title: 'Universal Planner',
+        description: 'Breaks any request into executable steps, parallelizes independent tasks, and handles complex dependencies.',
         badge: 'Core',
         color: 'text-purple-500',
         bg: 'bg-purple-500/10'
     },
     {
-        icon: Mic,
-        title: 'Voice Control',
-        description: 'STT/TTS with advanced noise suppression',
+        icon: Activity,
+        title: 'Execution Engine',
+        description: 'Executes tools with real-time monitoring, streaming progress to UI while maintaining context.',
         badge: 'Core',
         color: 'text-cyan-400',
         bg: 'bg-cyan-400/10'
     },
     {
         icon: Shield,
-        title: 'Privacy First',
-        description: 'Local-first, your code never leaves your machine',
+        title: 'Safety System',
+        description: 'Blocks dangerous actions, confirms high-risk operations, and audit logs everything.',
         badge: 'Core',
         color: 'text-purple-500',
         bg: 'bg-purple-500/10'
-    },
-    {
-        icon: Bot,
-        title: 'Agent Architecture',
-        description: 'Plans, codes, tests, and deploys autonomously',
-        badge: 'Core',
-        color: 'text-cyan-400',
-        bg: 'bg-cyan-400/10'
-    },
-    {
-        icon: GitBranch,
-        title: 'Git Integration',
-        description: 'Auto-commit, PR creation, and automated code review',
-        badge: 'Core',
-        color: 'text-purple-500',
-        bg: 'bg-purple-500/10'
-    },
-    {
-        icon: Cloud,
-        title: 'One-Click Deploy',
-        description: 'Deploy instantly to Vercel, Railway, AWS, or Docker',
-        badge: 'Core',
-        color: 'text-cyan-400',
-        bg: 'bg-cyan-400/10'
-    },
-    {
-        icon: Puzzle,
-        title: 'Plugin System',
-        description: 'Extend capabilities with community-built plugins',
-        badge: 'Beta',
-        color: 'text-oss-green',
-        bg: 'bg-oss-green/10'
     }
 ];
 
@@ -81,11 +49,11 @@ export const Features: React.FC = () => {
             <Container>
                 <div className="text-center mb-16 relative z-10">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Everything you need to <br className="hidden md:block" />
-                        <span className="gradient-text">build next-gen apps</span>
+                        The ultimate <br className="hidden md:block" />
+                        <span className="gradient-text">Core Systems</span>
                     </h2>
                     <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-                        Laxmana AI combines frontier models, local-first architecture, and an advanced agentic system to write production code at unprecedented speeds.
+                        Laxmana AI combines frontier models, an expansive tool registry, and an advanced universal planner to act as your ultimate personal engineer.
                     </p>
                 </div>
 

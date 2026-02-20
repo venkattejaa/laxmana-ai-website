@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         animate={{ boxShadow: isScrolled ? '0 0 20px rgba(34, 211, 238, 0.2)' : 'none' }}
                     >
-                        <img src="./clawbud_logo.svg" alt="Clawbud" className="w-8 h-8 object-contain" />
+                        <img src="./logo.png" alt="Clawbud" className="w-8 h-8 object-contain" />
                     </motion.div>
                     <span className="text-xl font-bold tracking-tight">
                         Claw<span className="text-clawbud-cyan">bud</span>

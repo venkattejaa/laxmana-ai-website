@@ -1,35 +1,35 @@
 import React from 'react';
 import { Container } from '../layout/Container';
-import { Layers, Activity, Brain, Wrench } from 'lucide-react';
+import { Shield, Activity, Brain } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const architectureLayers = [
     {
-        layer: "User Interface",
-        components: ["React Desktop App", "VS Code Extension", "CLI Tool"],
+        layer: "Financial Protection",
+        components: ["Approval Required", "Spend Limits", "Balance Checking"],
         color: "cyan",
-        icon: Layers,
+        icon: Shield,
         delay: 0
     },
     {
-        layer: "Agent Core",
-        components: ["Task Planner", "Context Manager", "Safety Guardrails"],
+        layer: "Communication Guard",
+        components: ["Draft Mode", "Rate Limiting", "Recipient Allowlist"],
         color: "purple",
         icon: Activity,
         delay: 100
     },
     {
-        layer: "AI Engine",
-        components: ["Multi-Provider AI", "Fallback System", "Local Models"],
+        layer: "Data Integrity",
+        components: ["No Mass Deletion", "Confirmation Prompts", "Backup Verification"],
         color: "cyan",
-        icon: Brain,
+        icon: Shield,
         delay: 200
     },
     {
-        layer: "Tool System",
-        components: ["Code Tools", "Deploy Tools", "Git Tools", "Custom Plugins"],
+        layer: "Audit & Compliance",
+        components: ["Immutable Logs", "Action Tracking", "Privacy Filters"],
         color: "purple",
-        icon: Wrench,
+        icon: Brain,
         delay: 300
     }
 ];
@@ -46,10 +46,10 @@ export const Architecture: React.FC = () => {
             <Container>
                 <div className="text-center mb-20 relative z-10">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        System <span className="gradient-text">Architecture</span>
+                        <span className="gradient-text">Safety</span> First
                     </h2>
                     <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-                        A modular, robust, and extensible design. Laxmana AI is built from the ground up to intelligently plan tasks before executing them.
+                        A powerful agent requires equally powerful guardrails. Laxmana AI is built from the ground up to keep you in control of sensitive actions.
                     </p>
                 </div>
 

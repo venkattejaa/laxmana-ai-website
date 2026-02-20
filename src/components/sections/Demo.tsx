@@ -7,22 +7,22 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 const demoFeatures = [
     {
-        title: "Generate with Voice",
-        description: "Speak your idea, get working code",
-        action: "Try Voice Input",
-        icon: Mic
-    },
-    {
-        title: "See the Architecture",
-        description: "AI plans before coding",
-        action: "View Plan",
+        title: "Build a website",
+        description: "Full stack app generated and deployed",
+        action: "Create Web App",
         icon: Code
     },
     {
-        title: "Deploy Instantly",
-        description: "One click to production",
-        action: "Deploy Demo",
-        icon: Zap
+        title: "Find me a job",
+        description: "Searches, ranks, applies automatically",
+        action: "Start Search",
+        icon: Mic
+    },
+    {
+        title: "Create a video",
+        description: "Researches, writes, generates, edits",
+        action: "Generate Media",
+        icon: MonitorPlay
     }
 ];
 
@@ -47,10 +47,10 @@ export const Demo: React.FC = () => {
             <Container>
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Experience the <span className="gradient-text">Future of Coding</span>
+                        Universal <span className="gradient-text">User Interface</span>
                     </h2>
                     <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-                        Try the interactive playground. Describe your application and watch Laxmana AI build it in real-time.
+                        A single input: "Do anything". Watch Laxmana AI break your request into executable steps and stream progress in real-time.
                     </p>
                 </div>
 
@@ -82,7 +82,7 @@ export const Demo: React.FC = () => {
 
                         <textarea
                             className="flex-1 bg-transparent resize-none outline-none text-white placeholder-white/20 min-h-[200px]"
-                            placeholder="Describe the application you want to build... Examples: 'A weather dashboard', 'A markdown editor', 'A complete e-commerce frontend'"
+                            placeholder='What do you want me to do? (e.g., "Build a full-stack SaaS", "Find me a new apartment", "Analyze this dataset")'
                             value={prompt}
                             onChange={(e) => setPrompt(e.target.value)}
                         />
@@ -95,7 +95,7 @@ export const Demo: React.FC = () => {
                                 {isGenerating ? (
                                     <span className="animate-pulse">Generating...</span>
                                 ) : (
-                                    <>Generate App <Send className="w-4 h-4 ml-1" /></>
+                                    <>Execute Request <Send className="w-4 h-4 ml-1" /></>
                                 )}
                             </Button>
                         </div>
@@ -141,7 +141,7 @@ export const Demo: React.FC = () => {
                         ) : (
                             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center text-text-muted/50 border-2 border-dashed border-white/5 rounded-xl">
                                 <MonitorPlay className="w-16 h-16 mb-4 opacity-50" />
-                                <p className="max-w-xs">Enter a prompt and click generate to see the live preview here.</p>
+                                <p className="max-w-xs">Enter a prompt and click execute to watch the universal planner execute steps in real-time.</p>
                             </div>
                         )}
 

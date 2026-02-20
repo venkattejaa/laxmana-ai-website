@@ -79,7 +79,7 @@ export const Contributors: React.FC = () => {
                             </div>
                         </div>
 
-                        <Button variant="secondary" href="https://github.com/venkattejaa/laxmana-ai/blob/main/CONTRIBUTING.md" external className="mx-auto" icon={ExternalLink}>
+                        <Button variant="secondary" href="https://github.com/venkattejaa/laxmana-ai" external className="mx-auto" icon={ExternalLink}>
                             Become a Contributor
                         </Button>
                     </div>

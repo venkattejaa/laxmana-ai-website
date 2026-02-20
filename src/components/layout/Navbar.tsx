@@ -10,9 +10,9 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-    { label: 'Features', href: '#features' },
-    { label: 'Demo', href: '#demo' },
-    { label: 'Architecture', href: '#architecture' },
+    { label: 'Core Systems', href: '#features' },
+    { label: 'Capabilities', href: '#demo' },
+    { label: 'Safety', href: '#architecture' },
     { label: 'Docs', href: 'https://docs.laxmana-ai.dev', external: true },
 ];
 

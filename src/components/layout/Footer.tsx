@@ -6,7 +6,7 @@ const footerSections = {
     product: {
         title: "Product",
         links: [
-            { label: "Features", href: "#features" },
+            { label: "Core Systems", href: "#features" },
             { label: "Download", href: "#download" },
             { label: "Changelog", href: "https://github.com/venkattejaa/laxmana-ai/releases" },
             { label: "Roadmap", href: "#roadmap" }
@@ -27,13 +27,13 @@ const footerSections = {
             { label: "GitHub", href: "https://github.com/venkattejaa/laxmana-ai" },
             { label: "Discord", href: "https://discord.gg/laxmana-ai" },
             { label: "Twitter", href: "https://twitter.com/laxmana_ai" },
-            { label: "Contribute", href: "https://github.com/venkattejaa/laxmana-ai/blob/main/CONTRIBUTING.md" }
+            { label: "Contribute", href: "https://github.com/venkattejaa/laxmana-ai" }
         ]
     },
     legal: {
         title: "Legal",
         links: [
-            { label: "License (MIT)", href: "https://github.com/venkattejaa/laxmana-ai/blob/main/LICENSE" },
+            { label: "License (MIT)", href: "https://github.com/venkattejaa/laxmana-ai" },
             { label: "Privacy", href: "/privacy" },
             { label: "Terms", href: "/terms" }
         ]

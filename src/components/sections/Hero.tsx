@@ -5,15 +5,18 @@ import { Github, Download, Star, ChevronDown, Terminal } from 'lucide-react';
 import { useGitHubStats } from '../../hooks/useGitHubStats';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
-const codeSnippet = `> laxmana generate app
-Initializing Laxmana Agent ⚡
-Planning architecture...
-Selecting model: Cerebras Llama 3.1
-Writing code at 2140 tokens/sec
-✓ App generated successfully
+const codeSnippet = `> laxmana do
+What would you like me to do?
+> Build a full stack website
+Planning universal agent strategy ⚡
+Breaking request into executable steps...
+Executing sub-agents in parallel...
+✓ Database schema created
+✓ Backend API deployed
+✓ Frontend React app generated
+✓ Successfully deployed to Vercel
 
-> npm run dev
-Starting local development server...`;
+Application is now live!`;
 
 export const Hero: React.FC = () => {
     const stats = useGitHubStats('venkattejaa/laxmana-ai');
@@ -44,12 +47,12 @@ export const Hero: React.FC = () => {
                         </a>
 
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight">
-                            Open Source AI <br />
-                            <span className="gradient-text">Development Agent</span>
+                            Universal <br />
+                            <span className="gradient-text">Agent System</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8 max-w-xl">
-                            Build complete applications with voice or text. Multi-provider AI, local-first, privacy-focused. Created by a student developer for the community.
+                            Build an AI agent that can literally do anything you ask. Powered by a 20+ Tool Registry, Universal Planner, and robust Execution Engine.
                         </p>
 
                         <div className="flex flex-wrap gap-4 mb-10">
@@ -63,16 +66,16 @@ export const Hero: React.FC = () => {
 
                         <div className="flex flex-wrap gap-8 items-center pt-6 border-t border-white/10">
                             <div>
-                                <div className="text-3xl font-bold font-mono text-cyan-400 mb-1">2000+</div>
-                                <div className="text-sm text-text-muted uppercase tracking-wider">tokens/sec</div>
+                                <div className="text-3xl font-bold font-mono text-cyan-400 mb-1">20+</div>
+                                <div className="text-sm text-text-muted uppercase tracking-wider">core tools</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold font-mono text-purple-500 mb-1">100%</div>
-                                <div className="text-sm text-text-muted uppercase tracking-wider">open source</div>
+                                <div className="text-3xl font-bold font-mono text-purple-500 mb-1">∞</div>
+                                <div className="text-sm text-text-muted uppercase tracking-wider">capabilities</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold font-mono text-oss-green mb-1">3</div>
-                                <div className="text-sm text-text-muted uppercase tracking-wider">platforms</div>
+                                <div className="text-3xl font-bold font-mono text-oss-green mb-1">100%</div>
+                                <div className="text-sm text-text-muted uppercase tracking-wider">autonomous</div>
                             </div>
                         </div>
                     </div>

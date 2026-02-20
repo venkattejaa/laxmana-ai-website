@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
                     <div className="col-span-2 lg:col-span-2">
                         <a href="#" className="flex items-center gap-3 mb-6">
-                            <img src="./clawbud_logo.svg" alt="Clawbud" className="w-8 h-8" />
+                            <img src="./logo.png" alt="Clawbud" className="w-8 h-8" />
                             <span className="text-xl font-bold tracking-tight">Claw<span className="text-clawbud-cyan">bud</span></span>
                         </a>
                         <p className="text-white/40 text-sm max-w-xs mb-8 leading-relaxed">
